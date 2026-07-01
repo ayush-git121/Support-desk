@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useTickets } from "../context/TicketContext";
 import api from "../api/ticketApi";
 
 export default function CreateTicket() {
   const navigate = useNavigate();
-  const { addTicket, updateTicket } = useTickets();
+
 
   const [formData, setFormData] = useState({
     title: "",
